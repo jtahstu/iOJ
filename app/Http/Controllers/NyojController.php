@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use DB;
+use Cache;
+
 class NyojController extends Controller
 {
     /**
@@ -17,8 +19,9 @@ class NyojController extends Controller
     public function index()
     {
         //
-         $problemList=DB::select('select * from nyojproblemlist limit 100;');
-		return view('nyoj.index',['list'=>$problemList,'count'=>count($problemList)]);
+//       $problemList=DB::select('select * from nyojproblemlist limit 100;');
+		$problemList= DB::table('nyojproblemlist')->paginate(100);
+		return view('nyoj.index',['list'=>$problemList]);
     }
 
     /**

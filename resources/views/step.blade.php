@@ -1,4 +1,5 @@
 @extends('layouts')
+@section('top','<a href="#" class="top">↑</a>')
 @section('step')
 <div class="pad100">
 </div>

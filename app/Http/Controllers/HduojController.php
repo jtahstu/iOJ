@@ -16,8 +16,9 @@ class HduojController extends Controller {
 	 */
 	public function index() {
 		//
+		$problemList= DB::table('hduojproblemlist')->paginate(100);
+		return view('hduoj.index',['list'=>$problemList]);
 		
-		return view('hduoj.index');
 	}
 
 	/**

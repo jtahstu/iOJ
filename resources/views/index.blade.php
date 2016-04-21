@@ -10,7 +10,7 @@
 				</p>
 			</div>
 			<div class="pad50">
-				<h3>IOJ</h3>
+				<h3>关于IOJ</h3>
 				<p class="pad2em">
 					值得刷4年的OJ，你刷不完的OJ
 				</p> 

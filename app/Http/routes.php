@@ -13,15 +13,15 @@
 Route::get('/', function () {
     return view('index');
 });
-Route::get('/home', function () {
-    return view('index');
-});
 
 Route::get('/akoj','AkojController@index');
+Route::get('/akoj/pid/{pid}','AkojController@problem');
 
 Route::get('/nyoj','NyojController@index');
+Route::get('/nyoj/pid/{pid}','NyojController@problem');
 
 Route::get('/hduoj','HduojController@index');
+Route::get('/hduoj/pid/{pid}','HduojController@problem');
 
 Route::post('/registr','UserController@register');
 

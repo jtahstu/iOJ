@@ -1,27 +1,16 @@
-html body{
-	padding: 0;
-	margin: 0;
-	font-family: "微软雅黑",sans-serif;
-	font-size: 14px;
-}
-ul li{
-	list-style-type: none;
-	display: inline;
-}
-.index1{
-	padding-top: 50px;
-}
+html body{padding: 0;margin: 0;font-family: "微软雅黑",sans-serif;}
+ul li{list-style-type: none;display: inline;}
+.index1{padding-top: 50px;}
 .pad2em{text-indent: 2em;}
 .pad250{padding-top: 250px;}
 .pad50{padding-top: 50px;}
 .pad60{padding-top: 60px;}
 .pad100{padding-top: 100px;}
-footer{
-	background-color: #3B3C3D;
-	height: 50px;
-	color: #AAAAAA;
-	
-}
+footer{background-color: #3B3C3D;height: 50px;color: #AAAAAA;}
 .footer1{margin-top: 15px;}
+.footer1 a{color:#AAAAAA;}
 .center{text-align: center;}
-.nyojcontent{font-size: 8px;}
+.nyojcontent{}
+.top {position: fixed;bottom:60px;right: 60px;width: 40px;height: 40px;background-color: #666;text-align: center;line-height: 40px;color: #FFFFFF;border-radius: 20px;}
+.hduojcontent{width: auto;}
+.hduojcontent ul li{margin:0 auto;text-align: center;background-color: #006600;}

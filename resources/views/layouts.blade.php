@@ -15,6 +15,7 @@
 		</script>
 	</head>
 	<body>
+		@yield('top')
 		<!--nav-->
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container">
@@ -68,8 +69,14 @@
 								杭电OJ
 							</a>
 						</li>
+						<li class="@yield('rank')">
+							<a href="/ioj/public/rank">
+								排名
+							</a>
+						</li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
+						
 						<li>
 							<a class="btn btn-link" data-toggle="modal"
 							data-target="#loginModal" type="button" >
@@ -82,6 +89,7 @@
 								注册
 							</a>
 						</li>
+						
 					</ul>
 				</div>
 			</div>
@@ -160,14 +168,14 @@
 		<footer>
 			<div class="container">
 				<p class="footer1 pull-left">
-					IOJ©{{date('Y')}} All rights received by jtahstu .
+					© IOJ {{date('Y')}}. All rights reserved. Yes, all of them
 				</p>
 				<div class="footer1 pull-right">
 					<span>
-					Power by Laravel 5
+					Power by <a href="https://laravel.com/" target="_blank">Laravel 5</a>
 					</span>
 					&nbsp;&nbsp;
-					<a href="">
+					<a href="mailto:root@jtahstu.com">
 						联系作者
 					</a>
 				</div>
