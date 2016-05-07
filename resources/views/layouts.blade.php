@@ -2,19 +2,21 @@
 	<head>
 		<meta charset="UTF-8"/>
 		<title>
-			IOJ - 你刷不完的OJ
+			IOJ - 分享产生价值,传递产生能量.
 		</title>
 		<meta content="IE=edge" http-equiv="X-UA-Compatible">
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<meta name="author" content="jtahstu"/>
+		<link rel="icon" href="{{URL::asset('favicon.ico')}}" />
 		<link rel="stylesheet" type="text/css" href="{{URL::asset('css/bootstrap.min.css')}}"/>
+		<link rel="stylesheet" type="text/css" href="{{URL::asset('slide/engine1/style.css')}}" />
 		<link rel="stylesheet" type="text/css" href="{{URL::asset('css/style.css')}}"/>
-		<script src="{{URL::asset('js/jquery-2.1.4.min.js')}}" type="text/javascript" charset="utf-8">
-		</script>
-		<script src="{{URL::asset('js/bootstrap.min.js')}}" type="text/javascript" charset="utf-8">
-		</script>
+		<script src="{{URL::asset('js/jquery-2.1.4.min.js')}}" type="text/javascript" charset="utf-8"></script>
+		<script src="{{URL::asset('js/bootstrap.min.js')}}" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="{{URL::asset('js/time.js')}}"></script>
+		<script type="text/javascript">@yield('js')</script>
 	</head>
-	<body>
+	<body >
 		@yield('top')
 		<!--nav-->
 		<nav class="navbar navbar-inverse navbar-fixed-top">
@@ -35,28 +37,29 @@
 				</div>
 				<div id="navbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav">
-						<li class="@yield('indexactive')">
-							<a href="/ioj/public">
-								首页
-							</a>
-						</li>
 						<li class="@yield('akojactive')">
 							<a href="/ioj/public/akoj">
 								安科OJ
 							</a>
 						</li>
-						<li class="@yield('nyojactive') dropdown">
-							<a href="/ioj/public/nyoj" class="dropdown-toggle" data-toggle="dropdown">
+						
+						<li class="@yield('nyojactive')">
+							<a href="/ioj/public/nyoj">
 								南阳OJ
+							</a>
+						</li>
+						<li class="@yield('hduojactive')">
+							<a href="/ioj/public/hduoj">
+								杭电OJ
+							</a>
+						</li>
+						<li class="dropdown">
+							<a href="" class="dropdown-toggle" data-toggle="dropdown">
+								其它
 								<b class="caret">
 								</b>
 							</a>
 							<ul class="dropdown-menu">
-								<li>
-									<a href="/ioj/public/nyoj">
-										南阳OJ
-									</a>
-								</li>
 								<li>
 									<a href="/ioj/public/step">
 										ACM进阶指南
@@ -64,19 +67,17 @@
 								</li>
 							</ul>
 						</li>
-						<li class="@yield('hduojactive')">
-							<a href="/ioj/public/hduoj">
-								杭电OJ
-							</a>
-						</li>
 						<li class="@yield('rank')">
-							<a href="/ioj/public/rank">
-								排名
+							<a href="/ioj/public/about">
+								关于
 							</a>
 						</li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
-						
+						<li>
+							<a id="time" class="btn btn-link" type="button" >
+							</a>
+						</li>
 						<li>
 							<a class="btn btn-link" data-toggle="modal"
 							data-target="#loginModal" type="button" >
@@ -89,7 +90,6 @@
 								注册
 							</a>
 						</li>
-						
 					</ul>
 				</div>
 			</div>
@@ -111,6 +111,7 @@
 					</div>
 					<div class="modal-body">
 						<form class="form-signin" action="/ioj/public/login" method="post">
+							<input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
 							<label for="inputName" class="control-label">Name</label>
 							<input type="text" id="inputEmail" class="form-control" placeholder="用户名" required autofocus>
 							<br />
@@ -140,15 +141,16 @@
 						</h4>
 					</div>
 					<div class="modal-body">
-						<form class="form-signin" action="/ioj/public/login" method="post">
+						<form class="form-signin" action="/ioj/public/register" method="post">
+							<input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
 							<label for="inputName" class="control-label">Name</label>
-							<input type="text" id="inputEmail" class="form-control" placeholder="用户名" required autofocus>
+							<input type="text" id="inputName" class="form-control" name="name" placeholder="用户名" required autofocus>
 							<br />
 							<label for="inputPassword" class="control-label">Password</label>
-							<input type="password" id="inputPassword" class="form-control" placeholder="密码" required>
+							<input type="password" id="inputPassword" class="form-control" name="password" placeholder="密码" required>
 							<br />
 							<label for="inputPassword" class="control-label">Password Again</label>
-							<input type="password2" id="inputPassword" class="form-control" placeholder="再次输入" required>
+							<input type="password" id="inputPassword" class="form-control" name="password2" placeholder="再次输入" required>
 							<br />
 							<button class="btn btn-primary btn-block" type="submit">
 								注册
@@ -164,15 +166,20 @@
 			@yield('hduojcontent')
 			@yield('nyojcontent')
 			@yield('step')
+			@yield('about')
+			@yield('problem')
 		</div>
-		<footer>
-			<div class="container">
+		<footer class="footer">
+			<div class="container" >
 				<p class="footer1 pull-left">
 					© IOJ {{date('Y')}}. All rights reserved. Yes, all of them
 				</p>
 				<div class="footer1 pull-right">
 					<span>
-					Power by <a href="https://laravel.com/" target="_blank">Laravel 5</a>
+						Power by
+						<a href="https://laravel.com/" target="_blank">
+							Laravel 5
+						</a>
 					</span>
 					&nbsp;&nbsp;
 					<a href="mailto:root@jtahstu.com">

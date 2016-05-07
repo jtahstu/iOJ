@@ -11,11 +11,6 @@ use Cache;
 
 class NyojController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         //
@@ -23,70 +18,21 @@ class NyojController extends Controller
 		$problemList= DB::table('nyojproblemlist')->paginate(100);
 		return view('nyoj.index',['list'=>$problemList]);
     }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+	public function problem($pid){
+    	$problem=DB::table('nyojproblems')->where("pid","$pid")->first();
+		$content=str_replace("DL", "div", $problem->content);
+		$content=str_replace("<H2>", "<H2 style=\"text-align:center\">", $content);
+		$content=str_replace("class=\"problem-ins\"", "class=\"problem-ins\" style=\"text-align:center\"", $content);
+//		var_dump($problem->content);
+	
+		$res=DB::table('nyojaccode')->where('pid',$pid)->first();
+		if($res){
+			$code=$res->code;
+		}else{
+			$code="不存在改题题解！";
+		}
+		
+		return view('nyoj.problem',['problem'=>$content,'pid'=>$pid,'code'=>$code]);
     }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
+    
 }

@@ -8,7 +8,6 @@
 <div class="pad60 hduojcontent">
 	<nav class="center">
 	{!! $list->render() !!}
-	<hr style="border:1px dashed #FFB5C5;margin-top: 0px;" size="1" width="100%" >
 	</nav>
 	
 	<div class="">
@@ -29,7 +28,7 @@
 			</tr>
 			@foreach ($list as $rec)
 			<tr>
-				<td class="center success">
+				<td class="center">
 					{{$rec->pid}}
 				</td>
 				
@@ -50,7 +49,6 @@
 	</div>
 	
 	<nav class="center">
-		<hr style="border:1px dashed #FFB5C5;margin-top: 0px;" size="1" width="100%" >
 	{!! $list->render() !!}
 	</nav>
 </div>

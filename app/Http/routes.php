@@ -23,8 +23,15 @@ Route::get('/nyoj/pid/{pid}','NyojController@problem');
 Route::get('/hduoj','HduojController@index');
 Route::get('/hduoj/pid/{pid}','HduojController@problem');
 
-Route::post('/registr','UserController@register');
+Route::post('/login','UserController@login');
+Route::get('/registr','UserController@register');
 
 Route::get('/step',function(){
 	return view('step');
 });
+
+Route::get('/about',function(){
+	return view('about');
+});
+
+Route::get('/rank','RankController@rank');	//当前积分榜

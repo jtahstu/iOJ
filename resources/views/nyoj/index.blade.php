@@ -21,12 +21,12 @@
 				<th class="center">
 					题目
 				</th>
-				<th class="center">
+				<!--<th class="center">
 					正确率
 				</th>
 				<th class="center">
 					通过/提交
-				</th>
+				</th>-->
 			</tr>
 			@foreach ($list as $rec)
 			<tr>
@@ -41,12 +41,12 @@
 						{{$rec->title}}
 					</a>
 				</td>
-				<td class="center">
+				<!--<td class="center">
 					{{$rec->ratio}}
 				</td>
 				<td class="center">
 					{{$rec->ac}}/{{$rec->submit}}
-				</td>
+				</td>-->
 			</tr>
 			@endforeach
 		</table>
