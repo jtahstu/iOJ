@@ -27,6 +27,9 @@ return $(window).height()-102;
 		</p>
 	</div>
 	<div id="">
+		<h3>
+			关于AC机器人
+		</h3>
 		<img src="{{URL::asset('img/akrank.png')}}" width="100%" style="max-width: 1015px;"/>
 		<br />
 		<img src="{{URL::asset('img/nyrank.png')}}" width="100%" style="max-width: 1015px;"/>

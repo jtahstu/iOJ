@@ -22,6 +22,7 @@
 	$("#login").hide();
 	$("#regist").hide();
 	$(".foot").hide();
+	$("#cnzz_stat_icon_1256705855").hide();
 })</script>
 	</head>
 	<body>
@@ -185,8 +186,9 @@
 		<footer class="@yield('foot')">
 			<div class="container" >
 				<p class="footer1 pull-left">
-					© IOJ {{date('Y')}}. All rights reserved. Yes, all of them
+					© IOJ {{date('Y')}}. All rights reserved . Yes, all of them
 				</p>
+				<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1256705855'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1256705855' type='text/javascript'%3E%3C/script%3E"));</script>
 				<div class="footer1 pull-right">
 					<span>
 						Power by

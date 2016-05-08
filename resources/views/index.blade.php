@@ -91,7 +91,7 @@
 			</p>
 		</div>
 		<div class="col-md-4">
-			<img src="{{URL::asset('img/1.jpg')}}"/>
+			<img src="{{URL::asset('img/1.jpg')}}" width="100%"/>
 		</div>
 	</div>
 </div>
