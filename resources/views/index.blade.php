@@ -7,36 +7,99 @@
 				<div class="ws_images">
 					<ul>
 						<li>
-							<img src="{{URL::asset('slide/data1/images/1.jpg')}}" alt="1" title="1" id="wows1_0">
+							<img src="{{URL::asset('img/lol/')}}<?php echo '/';
+							echo(string)rand(1, 76);
+							echo ".jpg";
+						?>" alt="1" title="1" id="wows1_0">
 						</li>
 						<li>
-							<img src="{{URL::asset('slide/data1/images/2.jpg')}}" alt="2" title="2" id="wows1_1">
+							<img src="{{URL::asset('img/lol/')}}<?php echo '/';
+							echo(string)rand(1, 76);
+							echo ".jpg";
+						?>" alt="2" title="2" id="wows1_1">
 						</li>
-						<!--<li>
-							<img src="{{URL::asset('img/bg.jpg')}}" alt="bootstrap carousel" title="3" id="wows1_2">
-						</li>-->
+						<li>
+							<img src="{{URL::asset('img/lol/')}}<?php echo '/';
+							echo(string)rand(1, 76);
+							echo ".jpg";
+						?>" alt="bootstrap carousel" title="3" id="wows1_2">
+						</li>
+						<li>
+							<img src="{{URL::asset('img/lol/')}}<?php echo '/';
+							echo(string)rand(1, 76);
+							echo ".jpg";
+						?>" alt="bootstrap carousel" title="4" id="wows1_3">
+						</li>
+						<li>
+							<img src="{{URL::asset('img/lol/')}}<?php echo '/';
+							echo(string)rand(1, 76);
+							echo ".jpg";
+						?>" alt="bootstrap carousel" title="5" id="wows1_2">
+						</li>
+						<li>
+							<img src="{{URL::asset('img/lol/')}}<?php echo '/';
+							echo(string)rand(1, 76);
+							echo ".jpg";
+						?>" alt="bootstrap carousel" title="6" id="wows1_3">
+						</li>
 					</ul>
 				</div>
 				<div class="ws_bullets">
 					<div>
 						<a href="#" title="1">
 							<span>
-								<img src="{{URL::asset('slide/data1/tooltips/1.jpg')}}" alt="1">
+								<img src="{{URL::asset('img/lol/')}}<?php echo '/';
+								echo(string)rand(1, 76);
+								echo ".jpg";
+							?>" alt="1">
 								1
 							</span>
 						</a>
 						<a href="#" title="2">
 							<span>
-								<img src="{{URL::asset('slide/data1/tooltips/2.jpg')}}" alt="2">
+								<img src="{{URL::asset('img/lol/')}}<?php echo '/';
+								echo(string)rand(1, 76);
+								echo ".jpg";
+							?>" alt="2">
 								2
 							</span>
 						</a>
-						<!--<a href="#" title="3">
+						<a href="#" title="3">
 							<span>
-								<img src="{{URL::asset('img/bg.jpg')}}" alt="3">
+								<img src="{{URL::asset('img/lol/')}}<?php echo '/';
+								echo(string)rand(1, 76);
+								echo ".jpg";
+							?>" alt="3">
 								3
 							</span>
-						</a>-->
+						</a>
+						<a href="#" title="4">
+							<span>
+								<img src="{{URL::asset('img/lol/')}}<?php echo '/';
+								echo(string)rand(1, 76);
+								echo ".jpg";
+							?>" alt="4">
+								4
+							</span>
+						</a>
+						<a href="#" title="5">
+							<span>
+								<img src="{{URL::asset('img/lol/')}}<?php echo '/';
+								echo(string)rand(1, 76);
+								echo ".jpg";
+							?>" alt="5">
+								5
+							</span>
+						</a>
+						<a href="#" title="6">
+							<span>
+								<img src="{{URL::asset('img/lol/')}}<?php echo '/';
+								echo(string)rand(1, 76);
+								echo ".jpg";
+							?>" alt="6">
+								6
+							</span>
+						</a>
 					</div>
 				</div>
 				<div class="ws_script" style="position:absolute;left:-99%">
@@ -91,7 +154,7 @@
 			</p>
 		</div>
 		<div class="col-md-4">
-			<img src="{{URL::asset('img/1.jpg')}}" width="100%"/>
+			<img src="{{URL::asset('img/1.jpg')}}" width="100%" style="padding-bottom: 200px;"/>
 		</div>
 	</div>
 </div>

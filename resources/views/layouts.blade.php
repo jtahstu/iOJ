@@ -11,6 +11,7 @@
 		<link rel="stylesheet" type="text/css" href="{{URL::asset('css/bootstrap.min.css')}}"/>
 		<link rel="stylesheet" type="text/css" href="{{URL::asset('slide/engine1/style.css')}}" />
 		<link rel="stylesheet" type="text/css" href="{{URL::asset('css/style.css')}}"/>
+		<link rel="stylesheet" type="text/css" href="{{URL::asset('css/prism.css')}}"/>
 		<script src="{{URL::asset('js/jquery-2.1.4.min.js')}}" type="text/javascript" charset="utf-8">
 		</script>
 		<script src="{{URL::asset('js/bootstrap.min.js')}}" type="text/javascript" charset="utf-8">

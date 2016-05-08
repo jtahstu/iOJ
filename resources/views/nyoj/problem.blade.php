@@ -12,7 +12,7 @@
 	
 	<div class="code">
 		<dt>题解代码</dt>
-		<pre>
+		<pre class="language-cpp">
 			<code>
 				{{$code}}
 			</code>
@@ -20,6 +20,7 @@
 		
 
 	</div>
+	<script src="{{URL::asset('js/prism.js')}}"></script>
 	<p class="link">
 		<div class="alert alert-success" role="alert">
 			<a href="http://acm.nyist.net/JudgeOnline/problem.php?pid={{$pid}}" target="_blank">

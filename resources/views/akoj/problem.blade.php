@@ -36,7 +36,7 @@ $.trim($('#code').val());
 				author：{{$rec->userid}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				language：{{$rec->language}}
 			</div>
-			<pre>
+			<pre class="language-cpp">
 			<code id="code">
 				{{$rec->code}}
 			</code>
@@ -46,6 +46,7 @@ $.trim($('#code').val());
 		</div>
 		@endforeach
 	</div>
+	<script src="{{URL::asset('js/prism.js')}}"></script>
 	<div id="cyEmoji" role="cylabs" data-use="emoji">
 	</div>
 	<script type="text/javascript" charset="utf-8" src="http://changyan.itc.cn/js/??lib/jquery.js,changyan.labs.js?appid=cysnI7iga">

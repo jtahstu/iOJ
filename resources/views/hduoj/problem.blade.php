@@ -13,7 +13,7 @@
 	
 	<div class="code">
 		<dt>题解代码</dt>
-		<pre>
+		<pre class="language-cpp">
 			<code>
 				{{$code}}
 			</code>
@@ -21,6 +21,7 @@
 		
 
 	</div>
+	<script src="{{URL::asset('js/prism.js')}}"></script>
 	<div id="cyEmoji" role="cylabs" data-use="emoji">
 	</div>
 	<script type="text/javascript" charset="utf-8" src="http://changyan.itc.cn/js/??lib/jquery.js,changyan.labs.js?appid=cysnI7iga">
