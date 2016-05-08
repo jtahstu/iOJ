@@ -12,12 +12,9 @@
 						<li>
 							<img src="{{URL::asset('slide/data1/images/2.jpg')}}" alt="2" title="2" id="wows1_1">
 						</li>
-						<li>
-							<a href="http://wowslider.com/vi">
-								<img src="{{URL::asset('slide/data1/images/3.jpg')}}" alt="bootstrap carousel" title="3" id="wows1_2">
-							</a>
-						</li>
-						
+						<!--<li>
+							<img src="{{URL::asset('img/bg.jpg')}}" alt="bootstrap carousel" title="3" id="wows1_2">
+						</li>-->
 					</ul>
 				</div>
 				<div class="ws_bullets">
@@ -34,13 +31,12 @@
 								2
 							</span>
 						</a>
-						<a href="#" title="3">
+						<!--<a href="#" title="3">
 							<span>
-								<img src="{{URL::asset('slide/data1/tooltips/3.jpg')}}" alt="3">
+								<img src="{{URL::asset('img/bg.jpg')}}" alt="3">
 								3
 							</span>
-						</a>
-						
+						</a>-->
 					</div>
 				</div>
 				<div class="ws_script" style="position:absolute;left:-99%">

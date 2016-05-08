@@ -16,7 +16,14 @@ class AkojController extends Controller
 		return view('akoj.index',['list'=>$problemList]);
     }
 
-    public function problem(){
-    	
+    public function problem($pid){
+    	$res=DB::select("select * from akojaccode where pid=$pid limit 100");
+		if($res){
+			
+		}else{
+			$res="不存在改题题解！";
+		}
+		
+		return view('akoj.problem',['pid'=>$pid,'code'=>$res]);
     }
 }

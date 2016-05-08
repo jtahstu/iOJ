@@ -6,7 +6,8 @@
 	});
 });')
 @section('about')
-	<div class="pad100 about">
+	<div class="pad60 about">
+		
 		<div class="">
 				<h3>
 					关于ACM

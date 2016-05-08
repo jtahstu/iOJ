@@ -23,6 +23,9 @@ Route::get('/nyoj/pid/{pid}','NyojController@problem');
 Route::get('/hduoj','HduojController@index');
 Route::get('/hduoj/pid/{pid}','HduojController@problem');
 
+Route::get('/search','SearchController@index');
+Route::post('/searchs','SearchController@back');
+
 Route::post('/login','UserController@login');
 Route::get('/registr','UserController@register');
 

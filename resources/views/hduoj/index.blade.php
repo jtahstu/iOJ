@@ -19,12 +19,12 @@
 				<th class="center">
 					题目
 				</th>
-				<th class="center">
+				<!--<th class="center">
 					正确率
 				</th>
 				<th class="center">
 					通过/提交
-				</th>
+				</th>-->
 			</tr>
 			@foreach ($list as $rec)
 			<tr>
@@ -34,15 +34,15 @@
 				
 				<td>
 					<a href="/ioj/public/hduoj/pid/{{$rec->pid}}">
-						{{$rec->ptit}}
+						{{$rec->title}}
 					</a>
 				</td>
-				<td class="center">
+				<!--<td class="center">
 					{{$rec->pratio}}
 				</td>
 				<td class="center">
 					{{$rec->pac}}/{{$rec->psub}}
-				</td>
+				</td>-->
 			</tr>
 			@endforeach
 		</table>

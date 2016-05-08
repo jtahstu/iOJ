@@ -11,12 +11,20 @@
 		<link rel="stylesheet" type="text/css" href="{{URL::asset('css/bootstrap.min.css')}}"/>
 		<link rel="stylesheet" type="text/css" href="{{URL::asset('slide/engine1/style.css')}}" />
 		<link rel="stylesheet" type="text/css" href="{{URL::asset('css/style.css')}}"/>
-		<script src="{{URL::asset('js/jquery-2.1.4.min.js')}}" type="text/javascript" charset="utf-8"></script>
-		<script src="{{URL::asset('js/bootstrap.min.js')}}" type="text/javascript" charset="utf-8"></script>
-		<script type="text/javascript" src="{{URL::asset('js/time.js')}}"></script>
+		<script src="{{URL::asset('js/jquery-2.1.4.min.js')}}" type="text/javascript" charset="utf-8">
+		</script>
+		<script src="{{URL::asset('js/bootstrap.min.js')}}" type="text/javascript" charset="utf-8">
+		</script>
+		<script type="text/javascript" src="{{URL::asset('js/time.js')}}">
+		</script>
 		<script type="text/javascript">@yield('js')</script>
+		<script type="text/javascript">$(function() {
+	$("#login").hide();
+	$("#regist").hide();
+	$(".foot").hide();
+})</script>
 	</head>
-	<body >
+	<body>
 		@yield('top')
 		<!--nav-->
 		<nav class="navbar navbar-inverse navbar-fixed-top">
@@ -42,7 +50,6 @@
 								安科OJ
 							</a>
 						</li>
-						
 						<li class="@yield('nyojactive')">
 							<a href="/ioj/public/nyoj">
 								南阳OJ
@@ -67,6 +74,11 @@
 								</li>
 							</ul>
 						</li>
+						<li class="@yield('searchactive')">
+							<a href="/ioj/public/search">
+								检索
+							</a>
+						</li>
 						<li class="@yield('rank')">
 							<a href="/ioj/public/about">
 								关于
@@ -78,13 +90,13 @@
 							<a id="time" class="btn btn-link" type="button" >
 							</a>
 						</li>
-						<li>
+						<li id="login">
 							<a class="btn btn-link" data-toggle="modal"
 							data-target="#loginModal" type="button" >
 								登录
 							</a>
 						</li>
-						<li>
+						<li id="regist">
 							<a class="btn btn-link" data-toggle="modal"
 							data-target="#registerModal" type="button" >
 								注册
@@ -168,8 +180,9 @@
 			@yield('step')
 			@yield('about')
 			@yield('problem')
+			@yield('search')
 		</div>
-		<footer class="footer">
+		<footer class="@yield('foot')">
 			<div class="container" >
 				<p class="footer1 pull-left">
 					© IOJ {{date('Y')}}. All rights reserved. Yes, all of them

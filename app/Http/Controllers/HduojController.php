@@ -15,8 +15,15 @@ class HduojController extends Controller {
 		return view('hduoj.index',['list'=>$problemList]);
 		
 	}
-	public function problem(){
-    	
+	public function problem($pid){
+    	$res=DB::table('hduojaccode')->where('pid',$pid)->first();
+		if($res){
+			$code=$res->code;
+		}else{
+			$code="不存在改题题解！";
+		}
+		
+		return view('hduoj.problem',['pid'=>$pid,'code'=>$code]);
     }
 	
 
