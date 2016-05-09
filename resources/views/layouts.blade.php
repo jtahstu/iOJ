@@ -63,13 +63,24 @@
 								杭电OJ
 							</a>
 						</li>
+						<li class="@yield('pojactive')">
+							<a href="/ioj/public/poj">
+								北大OJ
+							</a>
+						</li>
 						<li class="dropdown">
 							<a href="" class="dropdown-toggle" data-toggle="dropdown">
-								其它
+								资料
 								<b class="caret">
 								</b>
 							</a>
+							
 							<ul class="dropdown-menu">
+								<li>
+									<a href="/ioj/public/classify">
+										题目分类
+									</a>
+								</li>
 								<li>
 									<a href="/ioj/public/step">
 										ACM进阶指南
@@ -82,11 +93,7 @@
 								检索
 							</a>
 						</li>
-						<li class="@yield('rank')">
-							<a href="/ioj/public/about">
-								关于
-							</a>
-						</li>
+						
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 						<li>
@@ -233,10 +240,12 @@
 			@yield('akojcontent')
 			@yield('hduojcontent')
 			@yield('nyojcontent')
+			@yield('pojcontent')
 			@yield('step')
 			@yield('about')
 			@yield('problem')
 			@yield('search')
+			@yield('classify')
 		</div>
 		<footer class="@yield('foot')">
 			<div class="container" >
@@ -255,6 +264,10 @@ document.write(unescape("%3Cspan id='cnzz_stat_icon_1256705855'%3E%3C/span%3E%3C
 					&nbsp;&nbsp;
 					<a href="mailto:root@jtahstu.com">
 						联系作者
+					</a>
+					&nbsp;&nbsp;
+					<a href="/ioj/public/about">
+						关于
 					</a>
 				</div>
 			</div>

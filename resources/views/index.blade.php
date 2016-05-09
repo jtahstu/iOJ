@@ -117,7 +117,7 @@
 				</h3>
 				<p class="pad2em">
 					本系统现处于内测中...
-					Version：<span style="color: red;">1.0 Beta</span>
+					Version：<span style="color: red;">1.4 Beta</span>
 				</p>
 			</div>
 			<br />
@@ -136,6 +136,9 @@
 				关于OJ
 			</h5>
 			<p class="pad2em">
+				Online Judge系统（简称OJ）是一个在线的判题系统。用户可以在线提交程序多种程序（如C、C++、Pascal）源代码，系统对源代码进行编译和执行，并通过预先设计的测试数据来检验程序源代码的正确性。
+			</p>
+			<p class="pad2em">
 				一个用户提交的程序在Online Judge系统下执行时将受到比较严格的限制，包括运行时间限制，内存使用限制和安全限制等。用户程序执行的结果将被Online Judge系统捕捉并保存，然后再转交给一个裁判程序。该裁判程序或者比较用户程序的输出数据和标准输出样例的差别，或者检验用户程序的输出数据是否满足一定的逻辑条件。
 			</p>
 			<p class="pad2em">
@@ -147,7 +150,7 @@
 				关于IOJ
 			</h5>
 			<p class="pad2em">
-				IOJ - 基于PHP Laravel框架和MySQL数据库搭建的OJ题解网站
+				IOJ - 基于PHP（外文名:PHP: Hypertext Preprocessor，中文名：“超文本预处理器”）开源脚本语言和MySQL关系型数据库管理系统，使用Laravel 5(一套简洁、优雅的PHP Web开发框架)搭建的OJ题解网站
 			</p>
 			
 			<h5>
@@ -168,6 +171,16 @@
 					<li>
 						<a href="/ioj/public/akoj" target="_blank">
 							杭电OJ
+						</a>
+					</li>
+					<li>
+						<a href="/ioj/public/poj" target="_blank">
+							北大OJ
+						</a>
+					</li>
+					<li>
+						<a href="/ioj/public/zoj" target="_blank">
+							浙大OJ
 						</a>
 					</li>
 				</ol>

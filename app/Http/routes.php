@@ -21,6 +21,9 @@ Route::get('/nyoj/pid/{pid}','NyojController@problem');
 Route::get('/hduoj','HduojController@index');
 Route::get('/hduoj/pid/{pid}','HduojController@problem');
 
+Route::get('/poj','PojController@index');
+Route::get('/poj/pid/{pid}','PojController@problem');
+
 Route::get('/search','SearchController@index');
 Route::post('/searchs','SearchController@back');
 
@@ -36,3 +39,5 @@ Route::get('/about',function(){
 });
 
 Route::get('/rank','RankController@rank');	//当前积分榜
+
+Route::get('classify','ClassifyController@index');
