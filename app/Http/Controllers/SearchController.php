@@ -23,7 +23,7 @@ class SearchController extends Controller {
 			$res=DB::select($sql);
 			foreach($res as $rec){
 				$back="<table class=\"table table-bordered table-hover pad50\" >
-				<tr>
+				<tr class=\"list\">
 					<td>".$rec->pid."</td>
 					<td><a href=\"/ioj/public/$oj/pid/$content\">".$rec->title."</a></td>
 				</tr>
@@ -36,7 +36,7 @@ class SearchController extends Controller {
 			$res=DB::select($sql);
 			$back="<table class=\"table table-bordered table-hover\">";
 			foreach($res as $rec){
-				$back.="<tr>
+				$back.="<tr class=\"list\">
 					<td>".$rec->pid."</td>
 					<td><a href=\"/ioj/public/$oj/pid/$rec->pid\">".$rec->title."</a></td>
 				</tr>";

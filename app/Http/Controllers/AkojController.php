@@ -23,7 +23,13 @@ class AkojController extends Controller
 		}else{
 			$res="不存在改题题解！";
 		}
-		
+		//更改v浏览数
+		$view=DB::select("select view from akojproblemlist where pid=$pid");
+		foreach($view as $rec){
+			$views=$rec->view+1;
+			DB::update("update akojproblemlist set view=? where pid=?",[$views,$pid]);
+			break;
+		}
 		return view('akoj.problem',['pid'=>$pid,'code'=>$res]);
     }
 }

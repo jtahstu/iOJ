@@ -10,9 +10,7 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', 'IndexController@index');
 
 Route::get('/akoj','AkojController@index');
 Route::get('/akoj/pid/{pid}','AkojController@problem');
@@ -27,7 +25,7 @@ Route::get('/search','SearchController@index');
 Route::post('/searchs','SearchController@back');
 
 Route::post('/login','UserController@login');
-Route::get('/registr','UserController@register');
+Route::post('/register','UserController@register');
 
 Route::get('/step',function(){
 	return view('step');

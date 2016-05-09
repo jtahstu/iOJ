@@ -8,7 +8,8 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<meta name="author" content="jtahstu"/>
 		<link rel="icon" href="{{URL::asset('favicon.ico')}}" />
-		<link rel="stylesheet" type="text/css" href="{{URL::asset('css/bootstrap.min.css')}}"/>
+		<!--<link rel="stylesheet" type="text/css" href="{{URL::asset('css/bootstrap.min.css')}}"/>-->
+		<link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="{{URL::asset('slide/engine1/style.css')}}" />
 		<link rel="stylesheet" type="text/css" href="{{URL::asset('css/style.css')}}"/>
 		<link rel="stylesheet" type="text/css" href="{{URL::asset('css/prism.css')}}"/>
@@ -20,8 +21,8 @@
 		</script>
 		<script type="text/javascript">@yield('js')</script>
 		<script type="text/javascript">$(function() {
-	$("#login").hide();
-	$("#regist").hide();
+		$("#login").hide();
+		$("#regist").hide();
 	$(".foot").hide();
 	$("#cnzz_stat_icon_1256705855").hide();
 })</script>
@@ -92,6 +93,7 @@
 							<a id="time" class="btn btn-link" type="button" >
 							</a>
 						</li>
+						@if(!Session::has('name'))
 						<li id="login">
 							<a class="btn btn-link" data-toggle="modal"
 							data-target="#loginModal" type="button" >
@@ -103,6 +105,33 @@
 							data-target="#registerModal" type="button" >
 								注册
 							</a>
+						</li>
+						@endif
+						<li id="status">
+							@if(Session::has('name'))
+							<a type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								{{ Session::get('name') }}
+								<span class="caret">
+								</span>
+							</a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="#">
+										签到
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										积分
+									</a>
+								</li>
+								<li>
+									<a href="/ioj/public/logout">
+										注销
+									</a>
+								</li>
+							</ul>
+							@endif
 						</li>
 					</ul>
 				</div>
@@ -137,8 +166,8 @@
 							</button>
 						</form>
 					</div>
-				</div><!-- /.modal-content -->
-			</div><!-- /.modal -->
+				</div>
+			</div>
 		</div>
 		<!-- 注册模态框（Modal） -->
 		<div class="modal fade" id="registerModal" tabindex="-1" role="dialog"
@@ -161,19 +190,44 @@
 							<input type="text" id="inputName" class="form-control" name="name" placeholder="用户名" required autofocus>
 							<br />
 							<label for="inputPassword" class="control-label">Password</label>
-							<input type="password" id="inputPassword" class="form-control" name="password" placeholder="密码" required>
+							<input type="password" id="inputPassword" class="form-control" name="pass" placeholder="密码" required>
 							<br />
 							<label for="inputPassword" class="control-label">Password Again</label>
-							<input type="password" id="inputPassword" class="form-control" name="password2" placeholder="再次输入" required>
+							<input type="password" id="inputPassword2" class="form-control" name="pass2" placeholder="再次输入" required>
 							<br />
-							<button class="btn btn-primary btn-block" type="submit">
+							<button class="btn btn-primary btn-block" type="submit" id="register">
 								注册
 							</button>
 						</form>
 					</div>
-				</div><!-- /.modal-content -->
-			</div><!-- /.modal -->
+				</div>
+			</div>
 		</div>
+		<!--<script type="text/javascript">$(function() {
+		$("#register").click(function() {
+		var name = (jQuery("#inputName").val());
+		var pass = (jQuery("#inputPassword").val());
+		var pass2 = (jQuery("#inputPassword2").val());
+		$.ajax({
+		type: "post",
+		url: "/ioj/public/register",
+		data: {
+		'name': name,
+		'pass': pass,
+		'pass2': pass2
+		},
+		dataType: 'json',
+		headers: {
+		'X-CSRF-TOKEN': '{{ csrf_token() }}'
+		},
+		success: function(msg) {
+		console.log(msg);
+		alert(msg);
+		$("#status").html(msg);
+		}
+		});
+		)
+		});</script>-->
 		<div class="container">
 			@yield('index')
 			@yield('akojcontent')
@@ -189,7 +243,8 @@
 				<p class="footer1 pull-left">
 					© IOJ {{date('Y')}}. All rights reserved . Yes, all of them
 				</p>
-				<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1256705855'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1256705855' type='text/javascript'%3E%3C/script%3E"));</script>
+				<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cspan id='cnzz_stat_icon_1256705855'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1256705855' type='text/javascript'%3E%3C/script%3E"));</script>
 				<div class="footer1 pull-right">
 					<span>
 						Power by

@@ -10,37 +10,37 @@
 							<img src="{{URL::asset('img/lol/')}}<?php echo '/';
 							echo(string)rand(1, 76);
 							echo ".jpg";
-						?>" alt="1" title="1" id="wows1_0">
+							?>" alt="1" title="1" id="wows1_0">
 						</li>
 						<li>
 							<img src="{{URL::asset('img/lol/')}}<?php echo '/';
 							echo(string)rand(1, 76);
 							echo ".jpg";
-						?>" alt="2" title="2" id="wows1_1">
+							?>" alt="2" title="2" id="wows1_1">
 						</li>
 						<li>
 							<img src="{{URL::asset('img/lol/')}}<?php echo '/';
 							echo(string)rand(1, 76);
 							echo ".jpg";
-						?>" alt="bootstrap carousel" title="3" id="wows1_2">
+							?>" alt="bootstrap carousel" title="3" id="wows1_2">
 						</li>
 						<li>
 							<img src="{{URL::asset('img/lol/')}}<?php echo '/';
 							echo(string)rand(1, 76);
 							echo ".jpg";
-						?>" alt="bootstrap carousel" title="4" id="wows1_3">
+							?>" alt="bootstrap carousel" title="4" id="wows1_3">
 						</li>
 						<li>
 							<img src="{{URL::asset('img/lol/')}}<?php echo '/';
 							echo(string)rand(1, 76);
 							echo ".jpg";
-						?>" alt="bootstrap carousel" title="5" id="wows1_2">
+							?>" alt="bootstrap carousel" title="5" id="wows1_2">
 						</li>
 						<li>
 							<img src="{{URL::asset('img/lol/')}}<?php echo '/';
 							echo(string)rand(1, 76);
 							echo ".jpg";
-						?>" alt="bootstrap carousel" title="6" id="wows1_3">
+							?>" alt="bootstrap carousel" title="6" id="wows1_3">
 						</li>
 					</ul>
 				</div>
@@ -51,7 +51,7 @@
 								<img src="{{URL::asset('img/lol/')}}<?php echo '/';
 								echo(string)rand(1, 76);
 								echo ".jpg";
-							?>" alt="1">
+								?>" alt="1">
 								1
 							</span>
 						</a>
@@ -60,7 +60,7 @@
 								<img src="{{URL::asset('img/lol/')}}<?php echo '/';
 								echo(string)rand(1, 76);
 								echo ".jpg";
-							?>" alt="2">
+								?>" alt="2">
 								2
 							</span>
 						</a>
@@ -69,7 +69,7 @@
 								<img src="{{URL::asset('img/lol/')}}<?php echo '/';
 								echo(string)rand(1, 76);
 								echo ".jpg";
-							?>" alt="3">
+								?>" alt="3">
 								3
 							</span>
 						</a>
@@ -78,7 +78,7 @@
 								<img src="{{URL::asset('img/lol/')}}<?php echo '/';
 								echo(string)rand(1, 76);
 								echo ".jpg";
-							?>" alt="4">
+								?>" alt="4">
 								4
 							</span>
 						</a>
@@ -87,7 +87,7 @@
 								<img src="{{URL::asset('img/lol/')}}<?php echo '/';
 								echo(string)rand(1, 76);
 								echo ".jpg";
-							?>" alt="5">
+								?>" alt="5">
 								5
 							</span>
 						</a>
@@ -96,7 +96,7 @@
 								<img src="{{URL::asset('img/lol/')}}<?php echo '/';
 								echo(string)rand(1, 76);
 								echo ".jpg";
-							?>" alt="6">
+								?>" alt="6">
 								6
 							</span>
 						</a>
@@ -111,50 +111,69 @@
 			</script>
 			<script type="text/javascript" src="{{URL::asset('slide/engine1/script.js')}}">
 			</script>
-			<script src="{{URL::asset('slide//gg_bd_ad_720x90.js')}}" type="text/javascript">
-			</script>
-			<script src="{{URL::asset('slide//follow.js')}}" type="text/javascript">
-			</script>
-			<script src="{{URL::asset('slide//gg_bd_ad_720x90-2.js')}}" type="text/javascript">
-			</script>
 			<div class="pad50">
 				<h3>
 					公告
 				</h3>
 				<p class="pad2em">
-					本系统现处于测试中... , Version：1.0Beta
+					本系统现处于内测中...
+					Version：<span style="color: red;">1.0 Beta</span>
 				</p>
 			</div>
 			<br />
 			<br />
-			<p>
-				<ul>
-					<li>
-						<a href="/ioj/public/akoj">
-							<button class="btn btn-success">
-								安科OJ
-							</button>
-						</a>
-					</li>
-					<li>
-						<a href="/ioj/public/nyoj">
-							<button class="btn btn-success">
-								南阳OJ
-							</button>
-						</a>
-					</li>
-					<li>
-						<a href="/ioj/public/hduoj">
-							<button class="btn btn-success">
-								杭电OJ
-							</button>
-						</a>
-					</li>
-				</ul>
-			</p>
 		</div>
 		<div class="col-md-4">
-			<img src="{{URL::asset('img/1.jpg')}}" width="100%" style="padding-bottom: 200px;"/>
+			<img src="{{URL::asset('img/1.jpg')}}" width="100%"/>
+		</div>
+	</div>
+	<div class="alert alert-success col-lg-12" role="alert">
+		<h3 align="center">
+			IOJ - 分享产生价值，传递产生能量
+		</h3>
+		<div class="col-lg-6">
+			<h5>
+				关于OJ
+			</h5>
+			<p class="pad2em">
+				一个用户提交的程序在Online Judge系统下执行时将受到比较严格的限制，包括运行时间限制，内存使用限制和安全限制等。用户程序执行的结果将被Online Judge系统捕捉并保存，然后再转交给一个裁判程序。该裁判程序或者比较用户程序的输出数据和标准输出样例的差别，或者检验用户程序的输出数据是否满足一定的逻辑条件。
+			</p>
+			<p class="pad2em">
+				Online Judge系统最初使用于ACM-ICPC国际大学生程序设计竞赛和OI信息学奥林匹克竞赛中的自动判题和排名。现广泛应用于世界各地高校学生程序设计的训练、参赛队员的训练和选拔、各种程序设计竞赛以及数据结构和算法的学习和作业的自动提交判断中。
+			</p>
+		</div>
+		<div class="col-lg-6">
+			<h5>
+				关于IOJ
+			</h5>
+			<p class="pad2em">
+				IOJ - 基于PHP Laravel框架和MySQL数据库搭建的OJ题解网站
+			</p>
+			
+			<h5>
+				IOJ涵盖范围
+			</h5>
+			<p>
+				<ol style="list-style-type: circle;">
+					<li>
+						<a href="/ioj/public/akoj" target="_blank">
+							安科OJ
+						</a>
+					</li>
+					<li>
+						<a href="/ioj/public/nyoj" target="_blank">
+							南阳OJ
+						</a>
+					</li>
+					<li>
+						<a href="/ioj/public/akoj" target="_blank">
+							杭电OJ
+						</a>
+					</li>
+				</ol>
+				<p class="pad2em">其他OJ题解和功能仍在coding中...</p>
+			</p>
+			
 		</div>
 	</div>
 </div>

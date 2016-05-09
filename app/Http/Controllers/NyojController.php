@@ -32,6 +32,14 @@ class NyojController extends Controller
 			$code="不存在改题题解！";
 		}
 		
+		//更改v浏览数
+		$view=DB::select("select view from nyojproblemlist where pid=$pid");
+		foreach($view as $rec){
+			$views=$rec->view+1;
+			DB::update("update nyojproblemlist set view=? where pid=?",[$views,$pid]);
+			break;
+		}
+		
 		return view('nyoj.problem',['problem'=>$content,'pid'=>$pid,'code'=>$code]);
     }
     

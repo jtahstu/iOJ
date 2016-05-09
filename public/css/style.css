@@ -1,4 +1,4 @@
-html body{padding: 0;margin: 0;font-family: "微软雅黑",sans-serif;}
+html body{padding: 0;margin: 0;font-family: "微软雅黑";}
 ul li{list-style-type: none;display: inline;}
 .index1{padding-top: 50px;}
 .pad2em{text-indent: 2em;}
@@ -14,3 +14,4 @@ footer{background-color: #3B3C3D;height: 50px;color: #AAAAAA;}
 .top {position: fixed;bottom:60px;right: 60px;width: 40px;height: 40px;background-color: #666;text-align: center;line-height: 40px;color: #FFFFFF;border-radius: 20px;}
 .hduojcontent{width: auto;}
 .hduojcontent ul li{margin:0 auto;text-align: center;background-color: #006600;}
+.list{font-size: 14px;}

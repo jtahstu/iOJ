@@ -23,6 +23,14 @@ class HduojController extends Controller {
 			$code="不存在改题题解！";
 		}
 		
+		//更改v浏览数
+		$view=DB::select("select view from hduojproblemlist where pid=$pid");
+		foreach($view as $rec){
+			$views=$rec->view+1;
+			DB::update("update hduojproblemlist set view=? where pid=?",[$views,$pid]);
+			break;
+		}
+		
 		return view('hduoj.problem',['pid'=>$pid,'code'=>$code]);
     }
 	
