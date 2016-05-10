@@ -1,10 +1,11 @@
 @extends('layouts')
+@section('zojactive','active')
 @section('top','
 <a href="#" class="top">
 	↑
 </a>')
-@section('pojcontent')
-<div class="pad60">
+@section('zojcontent')
+<div class="pad60 zojcontent">
 	<nav class="center">
 		{!! $list->render() !!}
 	</nav>
@@ -21,7 +22,7 @@
 						题目
 					</th>
 					<th class="center">
-						来源OJ
+						浏览数
 						</th>
 				</tr>
 				@foreach ($list as $rec)
@@ -30,7 +31,7 @@
 						{{$rec->pid}}
 					</td>
 					<td>
-						<a href="/ioj/public/poj/pid/{{$rec->pid}}">
+						<a href="/ioj/public/zoj/pid/{{$rec->pid}}">
 							{{$rec->title}}
 						</a>
 					</td>

@@ -2,7 +2,9 @@
 @section('searchactive','active')
 @section('search')
 <script type="text/javascript">$(function() {
+	$('footer').hide();
 	$("#search").click(function() {
+		$(".search-content").html("");
 		var oj = (jQuery("#ojs").val());
 		var type = (jQuery("#types").val());
 		var content = (jQuery("#content").val());
@@ -47,14 +49,20 @@
 					<option value="2">
 						杭电OJ
 					</option>
+					<option value="3">
+						北大OJ
+					</option>
+					<option value="4">
+						浙大OJ
+					</option>
 				</select>
 			</label>
 			<label for="" class="col-lg-2">
 				<select name="type" class="form-control" id="types">
-					<option value="3">
+					<option value="11">
 						题号
 					</option>
-					<option value="4">
+					<option value="12">
 						标题
 					</option>
 				</select>
@@ -74,4 +82,3 @@
 	</div>
 </div>
 @endsection
-@section('foot',"foot")

@@ -1,13 +1,14 @@
 @extends('layouts')
-@section('nyojactive','active')
+@section('zojactive','active')
 @section('top','
 <a href="#" class="top">
 	↑
 </a>')
 @section('problem')
+
 <div class="pad50" >
 	<p class="problem">
-		{!!$problem!!}
+		<iframe src="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode={{$pid}}" width="100%" height="700px" frameborder="0" id="pro"></iframe>
 	</p>
 	
 	<div class="code">
@@ -21,25 +22,13 @@
 
 	</div>
 	<script src="{{URL::asset('js/prism.js')}}"></script>
-	<p class="link">
-		<div class="alert alert-success" role="alert">
-			<a href="http://acm.nyist.net/JudgeOnline/problem.php?pid={{$pid}}" target="_blank">
-				原文链接：http://acm.nyist.net/JudgeOnline/problem.php?pid={{$pid}}
-			</a>
-		</div>
-		<div class="alert alert-info">
-			<a href="http://acm.nyist.net/JudgeOnline/talking.php?pid={{$pid}}">
-				讨论区：http://acm.nyist.net/JudgeOnline/talking.php?pid={{$pid}}
-			</a>
-		</div>
-	</p>
 	<div id="cyEmoji" role="cylabs" data-use="emoji">
 	</div>
 	<script type="text/javascript" charset="utf-8" src="http://changyan.itc.cn/js/??lib/jquery.js,changyan.labs.js?appid=cysnI7iga">
 	</script>
 	<script charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/changyan.js" >
 	</script>
-	<div id="SOHUCS" sid="IOJ-nyoj{{$pid}}">
+	<div id="SOHUCS" sid="IOJ-zoj{{$pid}}">
 	</div>
 	<script charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/changyan.js" >
 	</script>

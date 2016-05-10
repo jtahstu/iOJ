@@ -117,7 +117,7 @@
 				</h3>
 				<p class="pad2em">
 					本系统现处于内测中...
-					Version：<span style="color: red;">1.4 Beta</span>
+					Version：<span style="color: red;">1.5 Beta</span>
 				</p>
 			</div>
 			<br />
@@ -150,7 +150,7 @@
 				关于IOJ
 			</h5>
 			<p class="pad2em">
-				IOJ - 基于PHP（外文名:PHP: Hypertext Preprocessor，中文名：“超文本预处理器”）开源脚本语言和MySQL关系型数据库管理系统，使用Laravel 5(一套简洁、优雅的PHP Web开发框架)搭建的OJ题解网站
+				IOJ - 基于PHP（外文名:PHP: Hypertext Preprocessor，中文名：“超文本预处理器”）开源脚本语言和MySQL关系型数据库管理系统，使用Laravel 5(一套简洁、优雅的PHP Web开发框架)搭建的OJ题解网站。
 			</p>
 			
 			<h5>

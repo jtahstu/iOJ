@@ -15,7 +15,18 @@ class SearchController extends Controller {
 	}
 	public function back(Request $request){
 		$data=Input::all();
-		$oj=$data['oj']==0?'akoj':($data['oj']==1?'nyoj':'hduoj');
+		if($data['oj']==0){
+			$oj='akoj';
+		}elseif($data['oj']==1){
+			$oj='nyoj';
+		}elseif($data['oj']==2){
+			$oj='hduoj';
+		}elseif($data['oj']==3){
+			$oj='poj';
+		}elseif($data['oj']==4){
+			$oj='zoj';
+		}
+//		$oj=$data['oj']==0?'akoj':($data['oj']==1?'nyoj':'hduoj');
 		$type=$data['type'];
 		$content=trim($data['content']);
 		if($type==3){

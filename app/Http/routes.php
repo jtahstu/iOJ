@@ -24,6 +24,9 @@ Route::get('/hduoj/pid/{pid}','HduojController@problem');
 Route::get('/poj','PojController@index');
 Route::get('/poj/pid/{pid}','PojController@problem');
 
+Route::get('/zoj','ZojController@index');
+Route::get('/zoj/pid/{pid}','ZojController@problem');
+
 Route::get('/search','SearchController@index');
 Route::post('/searchs','SearchController@back');
 
@@ -40,4 +43,9 @@ Route::get('/about',function(){
 
 Route::get('/rank','RankController@rank');	//当前积分榜
 
-Route::get('classify','ClassifyController@index');
+Route::get('/classify','ClassifyController@index');
+Route::get('/classify/{id}','ClassifyController@problem');
+
+Route::get('/wap',function(){
+	return view('wap');
+});
