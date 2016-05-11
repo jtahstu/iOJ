@@ -24,8 +24,8 @@
 		</script>
 		<script type="text/javascript">@yield('js')</script>
 		<script type="text/javascript">$(function() {
-	$("#login").hide();
-	$("#regist").hide();
+//	$("#login").hide();
+//	$("#regist").hide();
 	$(".foot").hide();
 	$("#cnzz_stat_icon_1256705855").hide();
 })</script>
@@ -111,16 +111,16 @@
 							<a id="time" class="btn btn-link" type="button" >
 							</a>
 						</li>
-						@if(!Session::has('name'))
+						@if(!Session::has('user'))
+						<!--data-toggle="modal"	data-target="#loginModal"-->
 						<li id="login">
-							<a class="btn btn-link" data-toggle="modal"
-							data-target="#loginModal" type="button" >
+							<a class="btn btn-link"  type="button" href="/ioj/public/auth/login">
 								登录
 							</a>
 						</li>
+						<!--data-toggle="modal"	data-target="#registerModal"--> 
 						<li id="regist">
-							<a class="btn btn-link" data-toggle="modal"
-							data-target="#registerModal" type="button" >
+							<a class="btn btn-link" type="button" href="/ioj/public/auth/register">
 								注册
 							</a>
 						</li>
@@ -171,8 +171,9 @@
 						</h4>
 					</div>
 					<div class="modal-body">
-						<form class="form-signin" action="/ioj/public/login" method="post">
-							<input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
+						<form class="form-signin" action="/ioj/public/auth/login" method="post">
+							<!--<input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">-->
+							 {!! csrf_field() !!}
 							<label for="inputName" class="control-label">Name</label>
 							<input type="text" id="inputEmail" class="form-control" placeholder="用户名" required autofocus>
 							<br />
@@ -202,8 +203,9 @@
 						</h4>
 					</div>
 					<div class="modal-body">
-						<form class="form-signin" action="/ioj/public/register" method="post">
-							<input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
+						<form class="form-signin" action="/ioj/public/auth/register" method="post">
+							<!--<input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">-->
+							 {!! csrf_field() !!}
 							<label for="inputName" class="control-label">Name</label>
 							<input type="text" id="inputName" class="form-control" name="name" placeholder="用户名" required autofocus>
 							<br />
