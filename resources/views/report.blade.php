@@ -1,4 +1,4 @@
-@if(\Auth::user()->name=='jtahstu'||\Auth::user()->name=='public')
+@if(\Auth::user()->name=='jtahstu'||\Auth::user()->name=='public'||\Auth::user()->name=='zj')
 <!DOCTYPE HTML>
 <html>
 <head>

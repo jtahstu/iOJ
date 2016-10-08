@@ -1,5 +1,5 @@
 html body{padding: 0;margin: 0;font-family: "微软雅黑";}
-ul li{list-style-type: none;display: inline;}
+ul li{list-style-type: none;display: inline;text-align: center;}
 .index1{padding-top: 50px;}
 .pad2em{text-indent: 2em;}
 .pad250{padding-top: 250px;}

@@ -53,12 +53,12 @@
 				<h3>
 					公告
 				</h3>
-				<p class="pad2em" style="color: red;font-size: 16px;font-family: '微软雅黑';">
+				<!--<p class="pad2em" style="color: red;font-size: 16px;font-family: '微软雅黑';">
 					为防止恶意刷题，目前系统中的安科OJ题解需要登录才可以访问，如有需要请
 					<a href="mailto:root@jtahstu.com">
 						致信管理员
 					</a>并说明个人详细信息。
-				</p>
+				</p>-->
 				<p class="pad2em">
 					公共登录账号，E-Mail Address：public@jtahstu.com，Password：public。
 				</p>

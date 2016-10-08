@@ -18,25 +18,28 @@ $(function() {
 })</script>
 <?php
 function getAS($page) {
-	$curl = curl_init();
-	curl_setopt($curl, CURLOPT_URL, "http://poj.org/problemlist?volume=$page");
-	curl_setopt($curl, CURLOPT_HEADER, 1);
-	curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-	curl_setopt($curl, CURLOPT_HEADER, array("Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", "Accept-Language: zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3"));
-	curl_setopt($curl, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0');
-	curl_setopt($curl, CURLOPT_ENCODING, 'gzip');
-	$data = curl_exec($curl);
-	curl_close($curl);
-	$regex = "/.*?<tr align=center><td>(.*?)<\/td>.*?<a href=.*?>(.*?)<\/a>\/<a href=.*?>(.*?)<\/a>.*?/";
 	$as = array();
-	if (preg_match_all($regex, $data, $matches)) {
-		$i = 0;
-		foreach ($matches[1] as $pid) {
-			$as[$pid] = array("ac" => $matches[2][$i], "sub" => $matches[3][$i]);
-			$i++;
+		$curl = curl_init();
+		curl_setopt($curl, CURLOPT_URL, "http://poj.org/problemlist?volume=$page");
+		curl_setopt($curl, CURLOPT_HEADER, 1);
+		curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+		curl_setopt($curl, CURLOPT_HEADER, array("Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", "Accept-Language: zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3"));
+		curl_setopt($curl, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0');
+		curl_setopt($curl, CURLOPT_ENCODING, 'gzip');
+		$data = curl_exec($curl);
+		curl_close($curl);
+		$regex = "/.*?<tr align=center><td>(.*?)<\/td>.*?<a href=.*?>(.*?)<\/a>\/<a href=.*?>(.*?)<\/a>.*?/";
+		if (preg_match_all($regex, $data, $matches)) {
+			$i = 0;
+			foreach ($matches[1] as $pid) {
+				$as[$pid] = array("ac" => $matches[2][$i], "sub" => $matches[3][$i]);
+				$i++;
+			}
 		}
-	}
 	return $as;
+}
+function getAS2($page){
+	return array();
 }
 $as = getAS($list -> currentPage());
 ?>

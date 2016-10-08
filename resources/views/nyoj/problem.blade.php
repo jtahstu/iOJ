@@ -28,7 +28,7 @@
 				'X-CSRF-TOKEN': '{{ csrf_token() }}'
 			},
 			success: function(msg) {
-				$(".code pre code").html(msg);
+				$(".code pre").html(msg);
 				$(".code").slideDown(4000, function() {});
 				$("#hide").show();
 				$("#copy").show();
@@ -54,23 +54,19 @@
 	<span id="pid">{{$pid}}</span>
 	<div id="">
 		<button class="btn btn-success" style="text-align: center;margin: 0 auto;" id="show">
-			显示题解代码
+		显示题解代码
 		</button>
 		<button class="btn btn-danger" style="text-align: center;margin: 0 auto;" id="hide">
-			隐藏题解代码
+		隐藏题解代码
 		</button>
 		<button class="btn btn-info" style="text-align: center;margin: 0 auto;" id="copy" data-clipboard-target="ac">
-			复制题解代码
+		复制题解代码
 		</button>
 	</div>
-	<div id="tishi">
-	</div>
+	<div id="tishi"></div>
 	<div class="code">
-		<pre class="language-cpp">
-			<code id="ac">
-			</code>
-		</pre>				
-
+		<pre class="">
+		</pre>						
 	</div>
 	<p class="link">
 		<div class="alert alert-success" role="alert">
@@ -84,26 +80,26 @@
 			</a>
 		</div>
 	</p>
-	<div id="cyEmoji" role="cylabs" data-use="emoji">
-	</div>
+	<div id="cyEmoji" role="cylabs" data-use="emoji"></div>
 	<script type="text/javascript" charset="utf-8" src="http://changyan.itc.cn/js/??lib/jquery.js,changyan.labs.js?appid=cysnI7iga">
 	</script>
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="" data-title="IOJ-nyoj{{$pid}}" data-url="http://www.jtahstu.com/ioj/public/nyoj/pid/{{$pid}}">
-	</div>
+	<div class="ds-thread" data-thread-key="" data-title="IOJ-nyoj{{$pid}}" data-url="http://www.jtahstu.com/ioj/public/nyoj/pid/{{$pid}}"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">var duoshuoQuery = {
-	short_name: "jtahstu"
+	<script type="text/javascript">
+var duoshuoQuery = {
+short_name: "jtahstu"
 };
 (function() {
-	var ds = document.createElement('script');
-	ds.type = 'text/javascript';
-	ds.async = true;
-	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-	ds.charset = 'UTF-8';
-	(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
-})();</script>
+var ds = document.createElement('script');
+ds.type = 'text/javascript';
+ds.async = true;
+ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+ds.charset = 'UTF-8';
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+	</script>
 	<!-- 多说公共JS代码 end -->
 	<!--<script charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/changyan.js" >
 	</script>-->

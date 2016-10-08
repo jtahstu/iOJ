@@ -18,26 +18,30 @@ $(function() {
 })</script>
 <?php
 function getAS($page) {
-	$curl = curl_init();
-	curl_setopt($curl, CURLOPT_URL, "http://acm.hdu.edu.cn/listproblem.php?vol=$page");
-	curl_setopt($curl, CURLOPT_HEADER, 1);
-	curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-	curl_setopt($curl, CURLOPT_HEADER, array("Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", "Accept-Language: zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3"));
-	curl_setopt($curl, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0');
-	curl_setopt($curl, CURLOPT_ENCODING, 'gzip');
-	$data = curl_exec($curl);
-	curl_close($curl);
-	$regex = "/.*?p(.*?,(.*?),.*?,\".*?\",(.*?),(.*?));/";
 	$as = array();
-	if (preg_match_all($regex, $data, $matches)) {
-//		var_dump($matches);
-		$i = 0;
-		foreach ($matches[2] as $pid) {
-			$as[$pid] = array("ac" => $matches[3][$i], "sub" => substr($matches[4][$i], 0,strlen($matches[4][$i])-1));
-			$i++;
+		$curl = curl_init();
+		curl_setopt($curl, CURLOPT_URL, "http://acm.hdu.edu.cn/listproblem.php?vol=$page");
+		curl_setopt($curl, CURLOPT_HEADER, 1);
+		curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+		curl_setopt($curl, CURLOPT_HEADER, array("Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", "Accept-Language: zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3"));
+		curl_setopt($curl, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0');
+		curl_setopt($curl, CURLOPT_ENCODING, 'gzip');
+		$data = curl_exec($curl);
+		curl_close($curl);
+		$regex = "/.*?p(.*?,(.*?),.*?,\".*?\",(.*?),(.*?));/";
+		if (preg_match_all($regex, $data, $matches)) {
+	//		var_dump($matches);
+			$i = 0;
+			foreach ($matches[2] as $pid) {
+				$as[$pid] = array("ac" => $matches[3][$i], "sub" => substr($matches[4][$i], 0,strlen($matches[4][$i])-1));
+				$i++;
+			}
 		}
-	}
+	
 	return $as;
+}
+function getAS2($page){
+	return array();
 }
 
 $as = getAS($list -> currentPage());

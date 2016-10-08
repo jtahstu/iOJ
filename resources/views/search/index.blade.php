@@ -62,11 +62,11 @@ $(function() {
 			</label>
 			<label for="" class="col-lg-2">
 				<select name="type" class="form-control" id="types">
-                    <option value="12">
-                        标题
-                    </option>
 					<option value="11">
 						题号
+					</option>
+					<option value="12">
+						标题
 					</option>
 				</select>
 			</label>

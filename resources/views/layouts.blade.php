@@ -10,6 +10,7 @@
 		<meta name="Keywords" content="ioj,akoj,nyoj,hdoj,poj,zoj,题解,代码,acm,刷题"/>
 		<meta name="Description" content="IOJ - 基于PHP（外文名:PHP: Hypertext Preprocessor，中文名：“超文本预处理器”）开源脚本语言和MySQL关系型数据库管理系统，使用Laravel 5(一套简洁、优雅的PHP Web开发框架)搭建的OJ题解网站。"/>
 		<meta name="author" content="jtahstu"/>
+		<meta property="qc:admins" content="17335273516241034571727052413" />
 		<link rel="icon" href="{{URL::asset('favicon.ico')}}" />
 		<link href="http://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
 		<!--<link rel="stylesheet" type="text/css" href="{{URL::asset('css/bootstrap.min.css')}}"/>-->
@@ -26,6 +27,7 @@
 		<script type="text/javascript" src="{{URL::asset('js/time.js')}}">
 		</script>
 		<script type="text/javascript">@yield('js')</script>
+		<script type="text/javascript" src="http://cdn.jtahstu.com/fuckyou.js"></script>
 		<!--almost coding by jtahstu at 2016/05/07-2016/05/14-->
 	</head>
 	<body>
@@ -113,6 +115,11 @@
 										移动端
 									</a>
 								</li>
+                                <li>
+                                    <a href="http://ask.jtahstu.com/?/question/3" target="_blank">
+                                        IOJ讨论交流区
+                                    </a>
+                                </li>
 							</ul>
 						</li>
 					</ul>
@@ -142,7 +149,17 @@
                                         课程实习报告
                                     </a>
                                 </li>
+                                    <li>
+                                        <a href="http://git.jtahstu.com/jtahstu/IOJ" target="_blank">
+                                            Git
+                                        </a>
+                                    </li>
                                 @endif
+                                <li>
+                                    <a href="/ioj/public/report" target="_blank">
+                                        课程实习报告
+                                    </a>
+                                </li>
 								<li>
 									<a href="/ioj/public/auth/logout">
 										退出系统
