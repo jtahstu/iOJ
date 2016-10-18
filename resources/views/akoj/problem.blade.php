@@ -20,7 +20,7 @@ $.trim($('#code').val());
 	});
 })</script>
 <div class="pad50" >
-	<div id="oj">
+	<!--<div id="oj">
 		<p class="problem">
 		@if($pid<=1147)
 		<iframe src="http://183.167.205.82:8081/JudgeOnline/showproblem?problem_id={{$pid}}" width="100%" height="700px" frameborder="0" id="pro">
@@ -29,7 +29,7 @@ $.trim($('#code').val());
 		<p class="alert alert-success" role="alert" align="center">啊哦，由于OJ数据库已经丢失，所以无法显示题目，只显示代码！</p>
 		@endif
 	</p>
-	</div>
+	</div>-->
 	<div class="alert alert-danger alert-dismissible" role="alert">
 		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 			<span aria-hidden="true">&times;</span>

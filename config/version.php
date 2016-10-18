@@ -1,3 +1,3 @@
 <?php
 
-return array('version' => '1.4.0 LTS' );
+return array('version' => '1.4.1 LTS' );

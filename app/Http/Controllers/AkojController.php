@@ -12,7 +12,7 @@ class AkojController extends Controller
 {
 	//只允许登录用户访问
 	public function __construct(){
-    	$this->middleware('auth');
+//  	$this->middleware('auth');
 	}
     public function index()
     {

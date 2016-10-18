@@ -58,11 +58,7 @@
 								安科新OJ
 							</a>
 						</li>
-						<li class="@yield('akojactive')">
-							<a href="/ioj/public/akoj">
-								安科OJ
-							</a>
-						</li>
+						
 						<li class="@yield('nyojactive')">
 							<a href="/ioj/public/nyoj">
 								南阳OJ
@@ -76,6 +72,11 @@
 						<li class="@yield('pojactive')">
 							<a href="/ioj/public/poj">
 								北大OJ
+							</a>
+						</li>
+						<li class="@yield('akojactive')">
+							<a href="/ioj/public/akoj">
+								安科原OJ
 							</a>
 						</li>
 						<li class="@yield('zojactive')">
