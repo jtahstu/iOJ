@@ -1,4 +1,4 @@
-@if(\Auth::user()->name=='jtahstu'||\Auth::user()->name=='public'||\Auth::user()->name=='zj')
+@if(Auth::check()&&(\Auth::user()->name=='jtahstu'||\Auth::user()->name=='public'||\Auth::user()->name=='zj'))
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -257,5 +257,8 @@
 </script>
 </body>
 </html>
+@else
+<p align="center">请先登录<br><a href="{{URL::to('auth/login')}}">登陆</a></p>
 @endif
+
 <!--coding by jtahstu at 2016/06/20-->

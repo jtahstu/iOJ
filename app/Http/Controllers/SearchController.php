@@ -37,7 +37,7 @@ class SearchController extends Controller {
 				$back = "<table class=\"table table-bordered table-hover pad50\" >
 				<tr class=\"list center\">
 					<td>" . $rec -> pid . "</td>
-					<td><a href=\"/ioj/public/$oj/pid/$content\">" . $rec -> title . "</a></td>
+					<td><a href=\"/ioj/public/$oj/pid/$content\" target='_blank'>" . $rec -> title . "</a></td>
 				</tr>
 				</table>";
 				break;
@@ -50,7 +50,7 @@ class SearchController extends Controller {
 			foreach ($res as $rec) {
 				$back .= "<tr class=\"list center\">
 					<td>" . $rec -> pid . "</td>
-					<td><a href=\"/ioj/public/$oj/pid/$rec->pid\">" . $rec -> title . "</a></td>
+					<td><a href=\"/ioj/public/$oj/pid/$rec->pid\" target='_blank'>" . $rec -> title . "</a></td>
 				</tr>";
 			}
 			$back .= "</table>";

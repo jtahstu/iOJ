@@ -41,7 +41,7 @@ $(function() {
 function getAS($page) {
 	$as = array();
 		$curl = curl_init();
-		curl_setopt($curl, CURLOPT_URL, "http://acm.nyist.net/JudgeOnline/problemset.php?page=$page");
+		curl_setopt($curl, CURLOPT_URL, "http://acm.nyist.edu.cn/JudgeOnline/problemset.php?page=$page");
 		curl_setopt($curl, CURLOPT_HEADER, 1);
 		curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 		curl_setopt($curl, CURLOPT_HEADER, array("Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", "Accept-Language: zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3"));
@@ -67,6 +67,7 @@ $as = getAS($list -> currentPage());
 
 ?>
 <div class="pad60 nyojcontent" style="background-image: url({{URL::asset('img/bgimg.jpg')}});">
+    
 	<nav class="center">
 		{!! $list->render() !!}
 	</nav>

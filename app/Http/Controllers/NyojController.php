@@ -40,7 +40,10 @@ class NyojController extends Controller
 		$pid=$data['pid'];
 		$res=DB::table('nyojaccode')->where('pid',$pid)->first();
 		if($res){
-			$code=$res->code;
+		    if(\Auth::check() || $pid<=100)
+			    $code=$res->code;
+			else
+		        $code = '请登陆后查看题解';
 		}else{
 			$code="不存在改题题解！".$pid;
 		}

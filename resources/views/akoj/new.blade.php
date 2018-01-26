@@ -10,7 +10,7 @@
 	})
 </script>
 	<div class="pad50">
-		<iframe src="http://ioj.ahstu.cc/JudgeOnline/problemset.php" width="100%" frameborder="0" id="pro">
+		<iframe src="//oj.ahstu.cc/JudgeOnline/problemset.php" width="100%" frameborder="0" id="pro">
 		</iframe>
 	</div>
 

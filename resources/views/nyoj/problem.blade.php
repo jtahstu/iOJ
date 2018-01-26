@@ -70,13 +70,13 @@
 	</div>
 	<p class="link">
 		<div class="alert alert-success" role="alert">
-			<a href="http://acm.nyist.net/JudgeOnline/problem.php?pid={{$pid}}" target="_blank">
-				原文链接：http://acm.nyist.net/JudgeOnline/problem.php?pid={{$pid}}
+			<a href="http://acm.nyist.edu.cn/JudgeOnline/problem.php?pid={{$pid}}" target="_blank">
+				原文链接：http://acm.nyist.edu.cn/JudgeOnline/problem.php?pid={{$pid}}
 			</a>
 		</div>
 		<div class="alert alert-info">
-			<a href="http://acm.nyist.net/JudgeOnline/talking.php?pid={{$pid}}" target="_blank">
-				讨论区：http://acm.nyist.net/JudgeOnline/talking.php?pid={{$pid}}
+			<a href="http://acm.nyist.edu.cn/JudgeOnline/talking.php?pid={{$pid}}" target="_blank">
+				讨论区：http://acm.nyist.edu.cn/JudgeOnline/talking.php?pid={{$pid}}
 			</a>
 		</div>
 	</p>

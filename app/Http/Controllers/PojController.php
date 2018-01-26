@@ -18,7 +18,10 @@ class PojController extends Controller {
 	public function problem($pid){
     	$res=DB::table('pojaccode')->where('pid',$pid)->first();
 		if($res){
-			$code=$res->code;
+			if(\Auth::check() || $pid<=1100)
+			    $code=$res->code;
+			else
+		        $code = '请登陆后查看题解';
 		}else{
 			$code="不存在改题题解！";
 		}

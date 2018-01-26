@@ -59,15 +59,17 @@
 						致信管理员
 					</a>并说明个人详细信息。
 				</p>-->
+				<!--<p class="pad2em">-->
+				<!--	公共登录账号，E-Mail Address：public@jtahstu.com，Password：public。-->
+				<!--</p>-->
 				<p class="pad2em">
-					公共登录账号，E-Mail Address：public@jtahstu.com，Password：public。
+					由于安科原OJ数据丢失，原刷题网站已经关闭。
 				</p>
 				<p class="pad2em">
-					由于浙大OJ硬盘损坏，数据丢失，现已进入维护关停状态，所以题目会加载不到。同样的由于安科原OJ数据丢失，网站已经关闭，原题目可去讨论区下载。
+					<span style="color: red;font-size: 20px;">本系统现已正式开放，关于南阳、杭电、北大和浙大OJ，部分代码开放，其它代码请注册登陆后查看。</span>
 				</p>
 				<p class="pad2em">
-					本系统现已开放公测...
-					Version：<span style="color: red;">{{Config::get('version.version')}}</span>
+				    Version：<span style="color: red;">{{Config::get('version.version')}}</span>
 				</p>
 			</div>
 			<br />

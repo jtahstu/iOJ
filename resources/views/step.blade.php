@@ -611,6 +611,6 @@
 </p>
 <p>
 	<br />
-	摘自南阳理工学院OJ -- <a href="http://acm.nyist.net/JudgeOnline/step.php" target="_blank">出处</a>
+	摘自南阳理工学院OJ -- <a href="http://acm.nyist.edu.cn/JudgeOnline/step.php" target="_blank">出处</a>
 </p>
 @endsection
